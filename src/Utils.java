@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Utils {
@@ -44,6 +46,24 @@ public class Utils {
 
         }
         return number;
+    }
+    public static int[] randomIntArray(int count, int min, int max) {
+        int[] result = new int[count];
+        for (int i = 0; i < count; i++) {
+            result[i] = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        return result;
+    }
+
+
+    public static List<Integer> randomIntList(int count, int min, int max) {
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            result.add((int) Math.floor(Math.random() * (max - min + 1) + min));
+        }
+
+        return result;
     }
 
 }
